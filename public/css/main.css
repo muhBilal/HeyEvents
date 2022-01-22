@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Poppins&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav-active {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-active::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 100px;
+    bottom: -10px;
+    background: #312B78;
+}
+
+@media only screen and (max-width: 500px) {
+    .nav-active {
+        justify-content: start;
+        margin-bottom: 5vh !important;
+    }
+}
