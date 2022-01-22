@@ -12,10 +12,10 @@
 <body>
     <main class="flex justify-start flex-col md:flex-row">
         <!-- Right Section -->
-        <section class="w-1/2 h-full bg-prime py-10  flex-col items-center justify-center hidden md:flex">
+        <section class="w-1/2 min-h-full bg-prime py-10  flex-col items-center justify-center hidden md:flex">
 
             <!-- Card -->
-            <div class="bg-white w-96 p-4 relative">
+            <div class="card">
                 <!-- Logo -->
                 <div class="bg-white w-max p-3 absolute  -left-6 -top-6 shadow-md">
                     <img src="./img/logo.svg">
@@ -79,10 +79,10 @@
 
         <!-- Left Section -->
         <section class="md:py-10 md:pl-20 py-10 px-5">
-            <div class="flex">
+            <a href="index.html" class="flex">
                 <img src="./img/logo.svg" class="mr-3">
-                <a href="#" class="font-bold text-prime text-2xl">HeyEvents!</a>
-            </div>
+                <p href="#" class="font-bold text-prime text-2xl">HeyEvents!</p>
+            </a>
 
             <div class="mt-16">
                 <h3 class="text-prime font-bold text-xl">Daftar Akun</h3>
@@ -110,7 +110,7 @@
 
                 <div class="mt-5">
                     <button class="btn-primary w-full">Daftar</button>
-                    <button class="btn-outline-primary w-full mt-3 flex justify-center items-center">
+                    <button class="btn-outline-primary w-full mt-3">
                         <img src="./img/ic_google.svg" class="mr-3">
                         <span>Daftar dengan Google</span>
                     </button>

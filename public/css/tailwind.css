@@ -601,8 +601,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 100vh;
 }
 
-.h-full {
-  height: 100%;
+.min-h-full {
+  min-height: 100%;
 }
 
 .w-full {
@@ -619,10 +619,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-1\/2 {
   width: 50%;
-}
-
-.w-96 {
-  width: 24rem;
 }
 
 .w-max {
@@ -910,7 +906,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .btn-primary {
+  display: flex;
   cursor: pointer;
+  align-items: center;
+  justify-content: center;
   border-width: 2px;
   --tw-border-opacity: 1;
   border-color: rgb(49 43 120 / var(--tw-border-opacity));
@@ -977,7 +976,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .btn-outline-primary {
+  display: flex;
   cursor: pointer;
+  align-items: center;
+  justify-content: center;
   border-width: 2px;
   --tw-border-opacity: 1;
   border-color: rgb(49 43 120 / var(--tw-border-opacity));
@@ -1014,7 +1016,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .btn-secondary {
+  display: flex;
   cursor: pointer;
+  align-items: center;
+  justify-content: center;
   border-width: 2px;
   --tw-border-opacity: 1;
   border-color: rgb(49 43 120 / var(--tw-border-opacity));
