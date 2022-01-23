@@ -7,6 +7,7 @@ module.exports = {
         'prime': '#312B78',
         'grey': '#746E6E',
         'green': '#1BB13C',
+        'yellow' : '#F3A939',
         'overlay': '#F1F0FF',
         'background': '#E5E5E5',
       },

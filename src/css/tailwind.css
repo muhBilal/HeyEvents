@@ -3,10 +3,18 @@
 @tailwind utilities;
 
 .btn-primary {
-    @apply bg-prime px-5 py-2 text-white font-semibold border-2 border-prime hover:bg-white hover:text-prime hover:border-prime hover:border-2 active:scale-75
+    @apply bg-prime px-5 py-2 text-white font-semibold border-2 border-prime hover:bg-white hover:text-prime hover:border-prime hover:border-2 active:scale-75 cursor-pointer
+}
+
+.btn-outline-primary {
+    @apply bg-white px-5 py-2 text-prime font-semibold border-2 border-prime hover:bg-prime hover:text-white hover:border-prime hover:border-2 active:scale-75 cursor-pointer
 }
 
 .btn-secondary {
     @apply bg-overlay px-5 py-2 text-prime border-2 border-prime font-semibold hover:bg-prime hover:text-white
-    active:scale-75
+    active:scale-75 cursor-pointer
+}
+
+.btn{
+    @apply shadow-md py-3 px-6 transition duration-300;
 }
