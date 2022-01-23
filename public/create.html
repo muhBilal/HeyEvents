@@ -6,12 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./css/main.css" rel="stylesheet">
     <link href="./css/tailwind.css" rel="stylesheet">
-    <link
-    href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
-    rel="stylesheet"
-  />
-  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-  <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <title>HeyEvents! - Buat</title>
@@ -77,9 +74,10 @@
                 </div> -->
             </nav>
             <div :class="{'flex': open, 'hidden': !open}"
-                class="flex-col hidden md:flex md:justify-end md:flex-row px-4 md:px-0">
-                <a href="login.html" class="btn-secondary mb-5 md:mb-0">Masuk</a>
-                <a href="register.html" class="btn-primary md:ml-8 ">Daftar</a>
+                class=" hidden px-5 md:flex md:justify-end md:flex-row md:pl-14 items-center md:border-l-2 border-ghost ">
+                <p class="text-black font-semibold text-xl mr-3 order-2 md:order-1">Hey, Jordan!</p>
+                <img src="./img/3.jpg" width="44" class="mr-3 order-1 md:order-2">
+                <img src="./img/ic_down.svg" width="24" class="order-3">
             </div>
         </div>
     </div>
@@ -94,10 +92,10 @@
 
             <div class=" mt-20 text-center">
                 <h3 class="text-black font-bold text-3xl">Berencana Mengadakan Event?</h3>
-                <p class="text-grey mt-3">Upload foto event k Foto juga akan digunakan sebagai thumbnail.</p>
+                <p class="text-grey mt-3">Upload foto event kamu. Foto juga akan digunakan sebagai thumbnail.</p>
             </div>
 
-            <div id="drop_zone" class="border-2 border-prime mt-10 border-dashed py-28  relative w-8/12 mx-auto">
+            <div id="drop_zone" class="border-2 border-prime mt-10 border-dashed py-28  relative md:w-8/12 mx-auto">
                 <div id="btn_file_pick"
                     class="  absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center p-3">
                     <!-- <div class="absolute">
@@ -133,7 +131,7 @@
                 <h3 class="text-black font-bold text-3xl">Detail Event</h3>
             </div>
 
-            <form action="" class="mt-10 w-5/12 mx-auto">
+            <form action="" class="mt-10 md:w-5/12 mx-auto">
 
                 <div class="flex flex-col mb-5">
                     <label for="title" class="text-prime font-semibold text-xl">Nama Event</label>
@@ -192,7 +190,8 @@
                     <label for="description" class="text-prime font-semibold text-xl">Akses</label>
                     <div class="mt-2 flex">
                         <div class="flex items-center mr-4 mb-4">
-                            <input onchange="changeAccess()" name="access" id="paid" type="radio" class="hidden" checked />
+                            <input onchange="changeAccess()" name="access" id="paid" type="radio" class="hidden"
+                                checked />
                             <label for="paid" class="flex items-center cursor-pointer text-lg text-grey">
                                 <span
                                     class="w-8 h-8 inline-block mr-2 rounded-full border bg-smoke flex-no-shrink"></span>
@@ -206,12 +205,16 @@
                                 Gratis</label>
                         </div>
                     </div>
-                    <input type="number" name="price" id="price" class="form-control mt-2"
-                    placeholder="Harga tiket" min="0">
+                    <input type="number" name="price" id="price" class="form-control mt-2" placeholder="Harga tiket"
+                        min="0">
                 </div>
             </form>
         </section>
     </main>
+
+    <footer class="text-center py-10 px-4 md:px-6">
+        <p class="text-grey font-semibold">© 2022 HeyEvents! by Ampersand Team. All Rights Reserved.</p>
+    </footer>
 
     <script>
     </script>
@@ -219,15 +222,15 @@
     <script>
         CKEDITOR.replace('description');
 
-       const next = () => {
-           document.getElementById('step1').style.display = 'none';
-           document.getElementById('step2').style.display = 'block';
-       }
+        const next = () => {
+            document.getElementById('step1').style.display = 'none';
+            document.getElementById('step2').style.display = 'block';
+        }
 
-       const back = () => {
-           document.getElementById('step1').style.display = 'block';
-           document.getElementById('step2').style.display = 'none';
-       }
+        const back = () => {
+            document.getElementById('step1').style.display = 'block';
+            document.getElementById('step2').style.display = 'none';
+        }
 
         var x = document.getElementById("date").autofocus;
         if (!document.getElementById('selectfile')) {

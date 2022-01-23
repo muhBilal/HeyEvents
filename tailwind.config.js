@@ -8,7 +8,8 @@ module.exports = {
         'grey': '#746E6E',
         'green': '#1BB13C',
         'overlay': '#F1F0FF',
-        'smoke': '#E5E5E5'
+        'smoke': '#E5E5E5',
+        'ghost': 'rgba(116, 110, 110, 0.4);'
       },
     },
     fontWeight: {
