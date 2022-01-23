@@ -23,3 +23,7 @@
 .card {
     @apply bg-white w-96 p-4 relative
 }
+
+.form-control {
+    @apply border-2 border-grey outline-none  py-3 px-2
+}
