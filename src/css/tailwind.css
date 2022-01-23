@@ -3,18 +3,44 @@
 @tailwind utilities;
 
 .btn-primary {
+<<<<<<< HEAD
     @apply bg-prime px-5 py-2 text-white font-semibold border-2 border-prime hover:bg-white hover:text-prime hover:border-prime hover:border-2 active:scale-75 cursor-pointer
 }
 
 .btn-outline-primary {
     @apply bg-white px-5 py-2 text-prime font-semibold border-2 border-prime hover:bg-prime hover:text-white hover:border-prime hover:border-2 active:scale-75 cursor-pointer
+=======
+    @apply bg-prime px-5 py-2 text-white font-semibold border-2 border-prime hover:bg-white hover:text-prime hover:border-prime hover:border-2 active:scale-75 cursor-pointer transition duration-150 ease-in-out flex justify-center items-center
+>>>>>>> 61d22113ccc964abdbccb4ab82f67c3af2aa5ef3
 }
+
+.btn-event {
+    @apply bg-prime px-5 py-4 text-white font-semibold border-2 border-prime  hover:border-prime hover:border-2 hover:scale-125 cursor-pointer transition duration-150 ease-in-out
+}
+
+.btn-outline-primary {
+    @apply bg-white px-5 py-2 text-prime font-semibold border-2 border-prime hover:bg-prime hover:text-white hover:border-prime hover:border-2 active:scale-75 cursor-pointer transition duration-150 ease-in-out flex justify-center items-center
+}
+
 
 .btn-secondary {
     @apply bg-overlay px-5 py-2 text-prime border-2 border-prime font-semibold hover:bg-prime hover:text-white
+<<<<<<< HEAD
     active:scale-75 cursor-pointer
 }
 
 .btn{
     @apply shadow-md py-3 px-6 transition duration-300;
 }
+=======
+    active:scale-75 cursor-pointer transition duration-150 ease-in-out flex justify-center items-center
+}
+
+.card {
+    @apply bg-white w-96 p-4 relative
+}
+
+.form-control {
+    @apply border-2 border-grey outline-none  py-3 px-2
+}
+>>>>>>> 61d22113ccc964abdbccb4ab82f67c3af2aa5ef3

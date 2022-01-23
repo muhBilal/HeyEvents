@@ -16,10 +16,10 @@
         <div x-data="{ open: false }"
             class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
             <div class="p-4 flex flex-row items-center justify-between">
-                <div class="flex">
+                <a href="index.html" class="flex">
                     <img src="./img/logo.svg" class="mr-3">
-                    <a href="#" class="font-bold text-prime text-2xl">HeyEvents!</a>
-                </div>
+                    <p href="#" class="font-bold text-prime text-2xl">HeyEvents!</p>
+                </a>
                 <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
                     <svg fill="#312B78" viewBox="0 0 20 20" class="w-6 h-6">
                         <path x-show="!open" fill-rule="evenodd"
@@ -69,16 +69,20 @@
                 </div> -->
             </nav>
             <div :class="{'flex': open, 'hidden': !open}" class="flex-col hidden md:flex md:justify-end md:flex-row px-4 md:px-0">
-                <button class="btn-secondary mb-5 md:mb-0">Masuk</button>
-                <button class="btn-primary md:ml-8 ">Daftar</button>
+                <a href="login.html" class="btn-secondary mb-5 md:mb-0">Masuk</a>
+                <a href="register.html" class="btn-primary md:ml-8 ">Daftar</a>
             </div>
         </div>
     </div>
     <!--End Navigation -->
 
-    <main class="bg-background">
+     <main class="py-16  max-w-screen-xl mx-auto px-4 md:px-6">
 
     </main>
+
+    <footer class="text-center py-10 px-4 md:px-6">
+        <p class="text-grey font-semibold">© 2022 HeyEvents! by Ampersand Team. All Rights Reserved.</p>
+    </footer>
 </body>
 
 </html>
