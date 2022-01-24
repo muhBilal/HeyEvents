@@ -25,6 +25,9 @@ module.exports = {
       extrabold: 800,
       'extra-bold': 800,
       black: 900,
+    },
+    borderWidth: {
+      '1': '1px'
     }
   },
   plugins: [],
