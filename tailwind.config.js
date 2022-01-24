@@ -7,7 +7,7 @@ module.exports = {
         'prime': '#312B78',
         'grey': '#746E6E',
         'green': '#1BB13C',
-        'yellow' : '#F3A939',
+        'yellow': '#F3A939',
         'overlay': '#F1F0FF',
         'smoke': '#E5E5E5',
         'ghost': 'rgba(116, 110, 110, 0.4);'
@@ -25,6 +25,9 @@ module.exports = {
       extrabold: 800,
       'extra-bold': 800,
       black: 900,
+    },
+    borderWidth: {
+      '1': '1px'
     }
   },
   plugins: [],
