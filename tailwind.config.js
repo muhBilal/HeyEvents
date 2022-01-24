@@ -7,7 +7,7 @@ module.exports = {
         'prime': '#312B78',
         'grey': '#746E6E',
         'green': '#1BB13C',
-        'yellow' : '#F3A939',
+        'yellow': '#F3A939',
         'overlay': '#F1F0FF',
         'smoke': '#E5E5E5',
         'ghost': 'rgba(116, 110, 110, 0.4);'
@@ -29,6 +29,9 @@ module.exports = {
     borderWidth: {
       '1': '1px'
     }
+  },
+  variants: {
+    display: ['responsive', 'hover', 'focus', 'group-hover'],
   },
   plugins: [],
 }

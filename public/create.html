@@ -17,7 +17,7 @@
 <body>
     <!-- Navigation -->
     <div class="w-full  bg-white py-5 drop-shadow-lg">
-        <div x-data="{ open: false }"
+        <div x-data="{ open: false, nav_open: false }"
             class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
             <div class="p-4 flex flex-row items-center justify-between">
                 <a href="index.html" class="flex">
@@ -37,7 +37,7 @@
             </div>
             <nav :class="{'flex': open, 'hidden': !open}"
                 class="flex-col justify-start  hidden md:flex md:justify-end md:flex-row mt-6 md:mt-0 mb-6 md:mb-0">
-                <a href="index.html" class="text-black px-5 hover:text-prime mb-4 md:mb-0">Menu</a>
+                <a href="index.html" class="text-black px-5 hover:text-prime mb-4 md:mb-0">Home</a>
                 <a href="search.html" class="text-black px-5 hover:text-prime mb-4 md:mb-0">Cari Event</a>
                 <a href="create.html" class="text-prime font-bold nav-active  px-5 mb-4 md:mb-0">Buat Event</a>
                 <a href="joined.html" class="text-black px-5 hover:text-prime mb-4 md:mb-0">Tergabung</a>
@@ -74,10 +74,17 @@
                 </div> -->
             </nav>
             <div :class="{'flex': open, 'hidden': !open}"
-                class=" hidden px-5 md:flex md:justify-end md:flex-row md:pl-14 items-center md:border-l-2 border-ghost ">
+                class=" hidden  px-5 md:flex md:justify-end md:flex-row md:pl-14 items-center md:border-l-2 border-ghost ">
                 <p class="text-black font-semibold text-xl mr-3 order-2 md:order-1">Hey, Jordan!</p>
                 <img src="./img/3.jpg" width="44" class="mr-3 order-1 md:order-2">
-                <img src="./img/ic_down.svg" width="24" class="order-3">
+                <div class="relative order-3 cursor-pointer group br-prime " @click="nav_open = !nav_open">
+                    <img src="./img/ic_down.svg" width="24" >
+                    <div :class="{'flex transition ease-in-out duration-500': nav_open, 'hidden': !nav_open}" class="hidden bg-white absolute p-5 -bottom-40 -right-16 shadow-md  flex-col justify-center ">
+                        <a href="profile.html" class="mg-5 btn-primary">Profile</a>
+                        <a class="mt-5 btn-secondary">Keluar</a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
