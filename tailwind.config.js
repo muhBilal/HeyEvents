@@ -30,5 +30,8 @@ module.exports = {
       '1': '1px'
     }
   },
+  variants: {
+    display: ['responsive', 'hover', 'focus', 'group-hover'],
+  },
   plugins: [],
 }

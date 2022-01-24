@@ -4,16 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./css/main.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <link href="./css/tailwind.css" rel="stylesheet">
-    <title>HeyEvents! - Tergabung</title>
+    <link href="./css/main.css" rel="stylesheet">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title>HeyEvents! - Edit Profil</title>
 </head>
 
 <body>
     <!-- Navigation -->
     <div class="w-full  bg-white py-5 drop-shadow-lg">
-        <div x-data="{ open: false }"
+        <div x-data="{ open: false, nav_open: false }"
             class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
             <div class="p-4 flex flex-row items-center justify-between">
                 <a href="index.html" class="flex">
@@ -31,11 +35,12 @@
                     </svg>
                 </button>
             </div>
-            <nav :class="{'flex': open, 'hidden': !open}" class="flex-col justify-start  hidden md:flex md:justify-end md:flex-row mt-6 md:mt-0 mb-6 md:mb-0">
-                <a href="index.html" class="text-black px-5  hover:text-prime mb-4 md:mb-0">Home</a>
+            <nav :class="{'flex': open, 'hidden': !open}"
+                class="flex-col justify-start  hidden md:flex md:justify-end md:flex-row mt-6 md:mt-0 mb-6 md:mb-0">
+                <a href="index.html" class="text-black px-5 hover:text-prime mb-4 md:mb-0">Home</a>
                 <a href="search.html" class="text-black px-5 hover:text-prime mb-4 md:mb-0">Cari Event</a>
-                <a href="create.html" class="text-black px-5 hover:text-prime  mb-4 md:mb-0">Buat Event</a>
-                <a href="joined.html" class="text-prime nav-active font-bold px-5  mb-4 md:mb-0">Tergabung</a>
+                <a href="create.html" class="text-black px-5 hover:text-prime mb-4 md:mb-0">Buat Event</a>
+                <a href="joined.html" class="text-black px-5 hover:text-prime mb-4 md:mb-0">Tergabung</a>
                 <a href="manage.html" class="text-black px-5 hover:text-prime mb-4 md:mb-0">Kelola</a>
                 <!-- <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                     href="#">Contact</a>
@@ -68,16 +73,65 @@
                     </div>
                 </div> -->
             </nav>
-            <div :class="{'flex': open, 'hidden': !open}" class="flex-col hidden md:flex md:justify-end md:flex-row px-4 md:px-0">
-                <a href="login.html" class="btn-secondary mb-5 md:mb-0">Masuk</a>
-                <a href="register.html" class="btn-primary md:ml-8 ">Daftar</a>
+            <div :class="{'flex': open, 'hidden': !open}"
+                class=" hidden  px-5 md:flex md:justify-end md:flex-row md:pl-14 items-center md:border-l-2 border-ghost ">
+                <p class="text-black font-semibold text-xl mr-3 order-2 md:order-1">Hey, Jordan!</p>
+                <img src="./img/3.jpg" width="44" class="mr-3 order-1 md:order-2">
+                <div class="relative order-3 cursor-pointer group br-prime " @click="nav_open = !nav_open">
+                    <img src="./img/ic_down.svg" width="24">
+                    <div :class="{'flex transition ease-in-out duration-500': nav_open, 'hidden': !nav_open}"
+                        class=" hidden bg-white absolute p-5 -bottom-40 -right-16 shadow-md  flex-col justify-center ">
+                        <a href="profile.html" class="mg-5 btn-primary">Profil</a>
+                        <a class="mt-5 btn-secondary">Keluar</a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
     <!--End Navigation -->
 
-     <main class="py-16  max-w-screen-xl mx-auto px-4 md:px-6">
+    <main class="py-16  max-w-screen-xl mx-auto px-4 md:px-6">
+        <section class="mx-auto flex justify-between  items-center relative">
+            <div class="flex justify-start gap-x-3 items-center relative">
+                <span class="text-grey">Jordan Frisay Himawan</span>
+                <span class="text-grey font-semibold mt-1">
+                    <img src="./img/ic_right2.svg">
+                </span>
+                <span class="text-prime font-semibold">Edit Profil</span>
+            </div>
+            <button class="btn-primary">Ajukan Verifikkasi</button>
+        </section>
 
+        <section class="flex flex-col mx-auto text-center mt-16 items-center w-max ">
+            <h3 class="text-black font-bold text-3xl">Edit Profil</h3>
+            <p class="text-grey text-lg mt-2">Atur data pribadi dan representasikan diri</p>
+            <div class="mt-10 flex items-center gap-x-5">
+                <img src="./img/4.jpg" width="90" height="90">
+                <button class="btn-primary">Upload Foto</button>
+                <button class="btn-secondary">Hapus</button>
+            </div>
+
+            <form action="" class="mt-10 text-left w-full">
+                <div class="flex flex-col mb-5">
+                    <label for="title" class="text-prime font-semibold text-xl">Nama</label>
+                    <input type="text" name="title" id="title" class="form-control mt-2"
+                        placeholder="Nama lengkap atau nama instansi dsb">
+                </div>
+                <div class="flex flex-col mb-5">
+                    <label for="title" class="text-prime font-semibold text-xl">Bio</label>
+                    <input type="text" name="title" id="title" class="form-control mt-2"
+                        placeholder="Pekerjaan, status, atau instansi tentang apa">
+                </div>
+                <div class="flex flex-col mb-5">
+                    <label for="title" class="text-prime font-semibold text-xl">Lokasi</label>
+                    <input type="text" name="title" id="title" class="form-control mt-2"
+                        placeholder="Kota tinggal">
+                </div>
+
+                <button class="btn-primary mt-10">Simpan</button>
+            </form>
+        </section>
     </main>
 
     <footer class="text-center py-10 px-4 md:px-6">

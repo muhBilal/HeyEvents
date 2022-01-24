@@ -1,25 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+<<<<<<< HEAD
 .btn{
     @apply shadow-md py-3 px-6 transition duration-300;
 }
+=======
+
+>>>>>>> 624a7c18804f04a1e283b9bda61ffb6554663e8e
 .btn-primary {
-    @apply bg-prime px-5 py-2 text-white font-semibold border-1 border-prime hover:bg-white hover:text-prime hover:border-prime hover:border-1 active:scale-75 cursor-pointer transition duration-150 ease-in-out flex justify-center items-center
+    @apply bg-prime px-5 py-2 text-white font-semibold border-1 border-prime hover:bg-white hover:text-prime hover:border-prime hover:border-1 active:scale-75 cursor-pointer transition duration-150 ease-in-out flex justify-center items-center outline-none
 }
 
 .btn-event {
-    @apply bg-prime px-5 py-4 text-white font-semibold border-1 border-prime  hover:border-prime hover:border-1 hover:scale-125 cursor-pointer transition duration-150 ease-in-out
+    @apply bg-prime px-5 py-4 text-white font-semibold border-1 border-prime  hover:border-prime hover:border-1  cursor-pointer outline-none
 }
 
 .btn-outline-primary {
-    @apply bg-white px-5 py-2 text-prime font-semibold border-1 border-prime hover:bg-prime hover:text-white hover:border-prime hover:border-1 active:scale-75 cursor-pointer transition duration-150 ease-in-out flex justify-center items-center
+    @apply bg-white px-5 py-2 text-prime font-semibold border-1 border-prime hover:bg-prime hover:text-white hover:border-prime hover:border-1 active:scale-75 cursor-pointer transition duration-150 ease-in-out flex justify-center items-center outline-none
 }
 
 
 .btn-secondary {
     @apply bg-overlay px-5 py-2 text-prime border-1 border-prime font-semibold hover:bg-prime hover:text-white
-    active:scale-75 cursor-pointer transition duration-150 ease-in-out flex justify-center items-center
+    active:scale-75 cursor-pointer transition duration-150 ease-in-out flex justify-center items-center outline-none
 }
 
 .link-secondary {
@@ -34,4 +38,8 @@
 
 .form-control {
     @apply border-1 border-grey outline-none  py-3 px-2
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 624a7c18804f04a1e283b9bda61ffb6554663e8e
