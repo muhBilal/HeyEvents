@@ -535,6 +535,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .z-10 {
   z-index: 10;
+<<<<<<< HEAD
+=======
 }
 
 .z-50 {
@@ -543,6 +545,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .z-40 {
   z-index: 40;
+>>>>>>> 624a7c18804f04a1e283b9bda61ffb6554663e8e
 }
 
 .order-2 {
@@ -706,6 +709,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 0.75rem;
 }
 
+<<<<<<< HEAD
+.mt-5 {
+  margin-top: 1.25rem;
+=======
 .mr-5 {
   margin-right: 1.25rem;
 }
@@ -724,6 +731,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mt-28 {
   margin-top: 7rem;
+>>>>>>> 624a7c18804f04a1e283b9bda61ffb6554663e8e
 }
 
 .block {
@@ -1019,10 +1027,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-width: 1px;
 }
 
+<<<<<<< HEAD
+=======
 .border-b-1 {
   border-bottom-width: 1px;
 }
 
+>>>>>>> 624a7c18804f04a1e283b9bda61ffb6554663e8e
 .border-dashed {
   border-style: dashed;
 }
@@ -1152,10 +1163,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 2rem;
 }
 
+<<<<<<< HEAD
+=======
 .pb-10 {
   padding-bottom: 2.5rem;
 }
 
+>>>>>>> 624a7c18804f04a1e283b9bda61ffb6554663e8e
 .text-left {
   text-align: left;
 }
