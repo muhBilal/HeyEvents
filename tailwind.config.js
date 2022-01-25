@@ -28,6 +28,9 @@ module.exports = {
     },
     borderWidth: {
       '1': '1px'
+    },
+    dropShadow: {
+      't-lg': '0 -10px 10px rgba(0, 0, 0, 0.25)',
     }
   },
   variants: {
