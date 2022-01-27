@@ -1,0 +1,198 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/main.css" rel="stylesheet">
+    <link href="./css/tailwind.css" rel="stylesheet">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <title>HeyEvents! - Cari</title>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div class="w-full  bg-white py-5 drop-shadow-lg">
+        <div x-data="{ open: false }"
+            class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+            <div class="p-4 flex flex-row items-center justify-between">
+                <a href="index.html" class="flex">
+                    <img src="./img/logo.svg" class="mr-3">
+                    <p href="#" class="font-bold text-prime text-2xl">HeyEvents!</p>
+                </a>
+                <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
+                    <svg fill="#312B78" viewBox="0 0 20 20" class="w-6 h-6">
+                        <path x-show="!open" fill-rule="evenodd"
+                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                            clip-rule="evenodd"></path>
+                        <path x-show="open" fill-rule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav :class="{'flex': open, 'hidden': !open}"
+                class="flex-col justify-start  hidden md:flex md:justify-end md:flex-row mt-6 md:mt-0 mb-6 md:mb-0">
+                <a href="index.html" class="text-black px-5 hover:text-prime mb-4 md:mb-0">Home</a>
+                <a href="search.html" class="text-prime nav-active font-bold px-5  mb-4 md:mb-0">Cari Event</a>
+                <a href="create.html" class="text-black hover:text-prime px-5 mb-4 md:mb-0">Buat Event</a>
+                <a href="joined.html" class="text-black hover:text-prime px-5  mb-4 md:mb-0">Tergabung</a>
+                <a href="manage.html" class="text-black hover:text-prime px-5 mb-4 md:mb-0">Kelola</a>
+                <!-- <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                    href="#">Contact</a>
+                <div @click.away="open = false" class="relative" x-data="{ open: false }">
+                    <button @click="open = !open"
+                        class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+                        <span>Dropdown</span>
+                        <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}"
+                            class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                    <div x-show="open" x-transition:enter="transition ease-out duration-100"
+                        x-transition:enter-start="transform opacity-0 scale-95"
+                        x-transition:enter-end="transform opacity-100 scale-100"
+                        x-transition:leave="transition ease-in duration-75"
+                        x-transition:leave-start="transform opacity-100 scale-100"
+                        x-transition:leave-end="transform opacity-0 scale-95"
+                        class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
+                        <div class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
+                            <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                                href="#">Link #1</a>
+                            <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                                href="#">Link #2</a>
+                            <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                                href="#">Link #3</a>
+                        </div>
+                    </div>
+                </div> -->
+            </nav>
+            <div :class="{'flex': open, 'hidden': !open}"
+                class="flex-col hidden md:flex md:justify-end md:flex-row px-4 md:px-0">
+                <a href="login.html" class="btn-secondary mb-5 md:mb-0">Masuk</a>
+                <a href="register.html" class="btn-primary md:ml-8 ">Daftar</a>
+            </div>
+        </div>
+    </div>
+    <!--End Navigation -->
+
+    <main class="py-16  max-w-screen-xl mx-auto px-4 md:px-6">
+        <div class="flex justify-start ml-20">
+            <p class="text-grey mr-1">Cari Event <</p> <p class="text-prime">Gapura Digital Indonesia</p>
+        </div>
+
+        <div class="flex justify-center mt-12">
+            <div>
+                <img src="./img/google-1.png" alt="">
+            </div>
+            <div class="text-start px-4">
+                <div class="flex">
+                    <p class="font-semibold text-prime">Google</p>
+                    <img src="img/ceklist.png" class="w-1/4 h-1/4">
+                </div>
+                <p class="text-grey">Perusahaan</p>
+            </div>
+            <div class="ml-36">
+                <button class="btn-primary md:ml-8">Gabung</button>
+            </div>
+        </div>
+
+        <div class="mt-12 text-center">
+            <h1 class="font-bold text-3xl">Gapura Digital Google Indonesia</h1>
+        </div>
+
+        <div class="flex justify-start">
+            <div class="mx-12">
+                <img src="./img/icon-1.png" class="pb-6">
+                <img src="./img/icon-2.png" class="pb-6">
+                <img src="./img/icon-3.png" class="pb-6">
+            </div>
+            <div class="ml-20">
+                <img src="./img/gapuraDigital.png" class="mt-16">
+            </div>
+        </div>
+        <div class="flex justify-center">
+            <div class="text-grey w-2/5 text-justify mt-12">
+                <p>GDG Indonesia hadir kembali! Persiapkan ide terbaikmu dan berkumpul bersama expert IT dari seluruh
+                    negeri. Tahukah kamu, bahwa ada kelas gratis dari Google yang dikhususkan untuk meningkatkan
+                    kecakapan pebisnis memanfaatkan teknologi digital dalam usaha?</p>
+                <p class="mt-5">Nah, kelas gratis yang dikenal dengan nama Gapura Digital ini, cocok untuk kamu yang
+                    sedang
+                    merintis usaha kecil mikro dan menengah (UMKM). Khususnya di masa-masa pandemi seperti saat ini.</p>
+                <p class="mt-5">Yuk, kita kenalan dengan Gapura Digital!</p>
+                <h4 class="text-prime mt-5">Gapura Digital</h4>
+                <p>Kelas ini bertujuan untuk mengenalkan UKM dengan dunia digital dan manfaatnya untuk membangun
+                    usaha. Di sini kamu bisa belajar tentang strategi, tren terbaru, dan saluran digital yang tepat
+                    untuk usahamu.</p>
+                <h4 class="text-prime mt-5">Handal Digital</h4>
+                <p>Di kelas Handal Digital, kamu bisa belajar bagaimana membuat sebuah website yang efektif, bagaimana
+                    merencanakan konten yang baik, tips-tips copywriting, cara membuat website, dan pemanfaatan media
+                    video sebagai strategi membangun brand atau merek.</p>
+                <h4 class="text-prime mt-5">Kelas Berbagi</h4>
+                <p>Sebelum kamu bergabung di kelas Berbagi, disarankan untuk terlebih dahulu mengikuti kelas Handal
+                    Digital dan Profesional Digital. Di kelas Berbagi, kamu bisa gratis belajar tentang SEO, periklanan
+                    online di Google, dan bagaimana mengoptimasi iklan digital.</p>
+                <h4 class="text-prime mt-5">Kelas Womenwill</h4>
+                <p>Kelas ini khusus para wanita yang ingin mengembangkan bisnis.
+                    Di Womenwill, dibahas bagaimana cara merintis bisnis dan mengaturnya agar berhasil.
+                    Selain itu, tentu saja diajarkan pula teknologi pendukung usaha UMKM.</p>
+            </div>
+        </div>
+        <div class="flex justify-center py-8">
+            <hr class="mt-5 w-6/12">
+        </div>
+        <div class="grid grid-cols-2 gap-y-5 mb-5 justify-self-center mx-auto ml-80">
+            <div class="flex items-center">
+                <img src="./img/Location.png">
+                <p class="text-grey ml-3">Onsite</p>
+            </div>
+            <div class="flex items-center">
+                <img src="./img/3 User.png">
+                <p class="text-grey ml-3">58 Peserta</p>
+            </div>
+            <div class="flex items-center">
+                <img src="./img/Calendar.png">
+                <p class="text-grey ml-3">28 Januari 2022</p>
+            </div>
+            <div class="flex items-center">
+                <img src="./img/Ticket.png">
+                <p class="text-prime font-semibold ml-3">Gratis</p>
+            </div>
+        </div>
+        <div class="flex justify-center">
+            <img src="./img/poster.png" alt="">
+        </div>
+
+        <div class="flex justify-center py-8">
+            <hr class="mt-5 w-6/12">
+        </div>
+
+
+        <div class="ml-52">
+            <h1>Partisipan bergabung</h1>
+        </div>
+        <div class="grid grid-cols-6 gap-2 mt-12 justify-items-center px-56">
+            <img src="./img/partisipan1.png" alt="">
+            <img src="./img/partisipan2.png" alt="">
+            <img src="./img/partisipan3.png" alt="">
+            <img src="./img/partisipan4.png" alt="">
+            <img src="./img/partisipan5.png" alt="">
+            <img src="./img/partisipan6.png" alt="">
+            <img src="./img/partisipan7.png" alt="">
+            <img src="./img/partisipan8.png" alt="">
+            <img src="./img/partisipan9.png" alt="">
+            <img src="./img/partisipan10.png" alt="">
+            <img src="./img/partisipan11.png" alt="">
+            <img src="./img/partisipan12.png" alt="">
+        </div>
+    </main>
+
+    <footer class="text-center py-10 px-4 md:px-6">
+        <p class="text-grey font-semibold">© 2022 HeyEvents! by Ampersand Team. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>

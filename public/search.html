@@ -89,14 +89,16 @@
                 <a class="text-grey cursor-pointer">Berbayar</a>
             </section>
             <div>
-                <div class='flex items-center justify-center from-cyan-100 via-pink-200 to-yellow-200 bg-gradient-to-br'>
+                <div
+                    class='flex items-center justify-center from-cyan-100 via-pink-200 to-yellow-200 bg-gradient-to-br'>
                     <div class="flex items-center max-w-md mx-auto bg-white rounded-lg " x-data="{ search: '' }">
                         <div class="w-full border-1 p-1.5">
                             <input type="search" class="w-full px-4 py-1 text-gray-800 rounded-full focus:outline-none"
                                 placeholder="search" x-model="search">
                         </div>
                         <div>
-                            <button type="submit" class="flex items-center bg-blue-500 justify-center w-12 h-12 text-white rounded-r-lg"
+                            <button type="submit"
+                                class="flex items-center bg-blue-500 justify-center w-12 h-12 text-white rounded-r-lg"
                                 :class="(search.length > 0) ? 'bg-purple-500' : 'bg-gray-500 cursor-not-allowed'"
                                 :disabled="search.length == 0">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -109,7 +111,7 @@
                     </div>
                 </div>
             </div>
-            </div>
+        </div>
         </div>
 
         <section class="mt-16 grid grid-cols-3 gap-10">
