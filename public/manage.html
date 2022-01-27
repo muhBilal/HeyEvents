@@ -70,9 +70,18 @@
                 </div> -->
             </nav>
             <div :class="{'flex': open, 'hidden': !open}"
-                class="flex-col hidden md:flex md:justify-end md:flex-row px-4 md:px-0">
-                <a href="login.html" class="btn-secondary mb-5 md:mb-0">Masuk</a>
-                <a href="register.html" class="btn-primary md:ml-8 ">Daftar</a>
+                class=" hidden  px-5 md:flex md:justify-end md:flex-row md:pl-14 items-center md:border-l border-ghost ">
+                <p class="text-black font-semibold text-xl mr-3 order-2 md:order-1">Hey, Jordan!</p>
+                <img src="./img/3.jpg" width="44" class="mr-3 order-1 md:order-2">
+                <div class="relative order-3 cursor-pointer group br-prime " @click="nav_open = !nav_open">
+                    <img src="./img/ic_down.svg" width="24">
+                    <div :class="{'flex transition ease-in-out duration-500': nav_open, 'hidden': !nav_open}"
+                        class="hidden bg-white absolute p-5 -bottom-40 -right-16 shadow-md  flex-col justify-center ">
+                        <a href="profile.html" class="mg-5 btn-primary">Profile</a>
+                        <a class="mt-5 btn-secondary">Keluar</a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
