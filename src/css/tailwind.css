@@ -29,7 +29,7 @@
 
 
 .card {
-    @apply bg-white w-96 p-4 relative border-1 border-grey
+    @apply bg-white md:w-96 w-80 p-4 relative border-1 border-grey
 }
 
 .form-control {

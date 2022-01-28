@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./css/main.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <link href="./css/tailwind.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <link rel="stylesheet" type="text/css" href="./css/slick.css">
     <link rel="stylesheet" type="text/css" href="./css/slick-theme.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
     <title>HeyEvents!</title>
 </head>
 
@@ -84,22 +85,24 @@
         <section
             class="relative content flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-center md:flex-row md:px-8 lg:px-8 py-5"
             id="home">
-            <div class="flex mx-8 mt-14">
+            <div class="flex md:mx-8 mx-auto mt-14">
                 <!-- Content -->
-                <div class="mr-20">
-                    <p class="text-base text-green pb-6 font-semibold">MOMEN SEKALI SEUMUR HIDUP</p>
-                    <h2 class="text-3xl pb-6 font-bold leading-loose">
-                        Cari dan Kelola <a class="text-prime">Event</a> <br> Dalam <a class="text-prime">Satu
-                            Platform.</a>
-                    </h2>
-                    <p class="text-grey mb-6">
-                        Rayakan era
-                        <a class="text-prime">#newnormal</a>
-                        dengan event dan <br> ciptakan momen berharga dalam hidup
-                    </p>
-                    <div class="flex flex-wrap gap-6">
-                        <button class="btn-primary">Cari Events</button>
-                        <button class="btn mb-5 md:mb-0 bg-white hover:bg-prime hover:text-white ">Cari Events</button>
+                <div class="mr-20 ">
+                    <div class="md:ml-0 ml-10">
+                        <p class="text-base text-green pb-6 font-semibold">MOMEN SEKALI SEUMUR HIDUP</p>
+                        <h2 class="md:text-3xl text-lg pb-6 font-bold leading-loose">
+                            Cari dan Kelola <a class="text-prime">Event</a> <br> Dalam <a class="text-prime">Satu
+                                Platform.</a>
+                        </h2>
+                        <p class="text-grey mb-6">
+                            Rayakan era
+                            <a class="text-prime">#newnormal</a>
+                            dengan event dan <br> ciptakan momen berharga dalam hidup
+                        </p>
+                    </div>
+                    <div class="flex flex-1 gap-6 justify-center">
+                        <button class="btn-primary h-2/5">Cari Events</button>
+                        <button class="btn mb-5 md:mb-0 bg-white hover:bg-prime hover:text-white ">Buat Events</button>
                     </div>
                 </div>
                 <!-- Image -->
@@ -111,22 +114,22 @@
 
         <!-- logo -->
         <div
-            class="relative content flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-center md:flex-row md:px-8 lg:px-8 py-5 mt-12">
-            <img src="img/apple.png" alt="" class="w-1/12 h-1/12 mx-6">
-            <img src="img/adobe.png" alt="" class="w-1/12 h-1/12 mx-6">
-            <img src="img/slack.png" alt="" class="w-1/12 h-1/12 mx-6">
-            <img src="img/spotify.png" alt="" class="w-1/12 h-1/12 mx-6">
-            <img src="img/google.png" alt="" class="w-1/12 h-1/12 mx-6">
+            class="relative content flex md:flex-row md:flex-rows max-w-screen-xl px-4 mx-auto md:items-center md:justify-center md:flex-row md:px-8 lg:px-8 py-5 mt-12">
+            <img src="img/apple.png" alt="" class="md:w-1/12 md:h-1/12 w-14 md:mx-6 mx-0">
+            <img src="img/adobe.png" alt="" class="md:w-1/12 md:h-1/12 w-14 md:mx-6 mx-2">
+            <img src="img/slack.png" alt="" class="md:w-1/12 md:h-1/12 w-14 md:mx-6 mx-2">
+            <img src="img/spotify.png" alt="" class="md:w-1/12 md:h-1/12 w-14 md:mx-6 mx-2">
+            <img src="img/google.png" alt="" class="md:w-1/12 md:h-1/12 w-14 md:mx-6 mx-2">
         </div>
 
         <!-- content -->
         <div
-            class="relative content flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-start md:flex-row md:px-8 lg:px-8 py-5 mt-12 pl-20">
-            <div class="ml-20">
+            class="relative content flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-start md:flex-row md:px-8 lg:px-8 py-5 mt-12 pl-4">
+            <div class="md:ml-20 ml-0">
                 <img src="img/kotak.png" alt="">
             </div>
             <div>
-                <h1 class="font-semibold text-3xl ml-36">Cari dan <br> Gabung <br> Event <br> Disekitar</h1>
+                <h1 class="font-semibold md:text-3xl text-lg ml-36">Cari dan <br> Gabung <br> Event <br> Disekitar</h1>
             </div>
             <div class="ml-20">
                 <img src="img/content1.png" alt="">
@@ -151,23 +154,25 @@
 
         <!-- content3 -->
         <div
-            class="relative content flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-center md:flex-row md:px-8 lg:px-8 py-5 mt-16">
-            <div class="flex">
-                <img src="img/content3-1.png" alt="">
-                <img src="img/content3-2.png" alt="">
-                <img src="img/content3-3.png" alt="">
-            </div>
+            class="relative content flex flex-row max-w-screen-xl px-4 mx-auto md:items-center md:justify-center md:px-8 lg:px-8 py-5 mt-16 w-32 md:w-full justify-center">
+            <img src="img/content3-1.png">
+            <img src="img/content3-2.png">
+            <img src="img/content3-3.png">
         </div>
         <div
             class="relative content flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-center md:flex-row md:px-8 lg:px-8 py-5 mt-16">
-            <div class="ml-20 ml-10">
-                <h1 class="font-bold text-4xl leading-relaxed">Pengelola Event? Atau, Ingin Mengadakan Event? Sans.</h1>
+            <div class="md:ml-20 ml-0">
+                <h1 class="font-bold md:text-4xl text-lg leading-relaxed">Pengelola Event? Atau, Ingin Mengadakan Event?
+                    Sans.</h1>
             </div>
             <div class="mr-10">
-                <p class="mb-10 leading-relaxed text-grey">Menginisiasi dan mengadakan event dengan mudah
+                <p class="mb-10 md:mt-0 mt-3 text-xs md:text-lg leading-relaxed text-grey">Menginisiasi dan mengadakan
+                    event dengan mudah
                     dan tidak terbatas pada skala perorangan, organisasi,
                     bahkan korporat.</p>
-                <button class="btn-secondary">Gabung Events Sekarang</button>
+                <div class="flex justify-center">
+                    <button class="btn-secondary">Gabung Events Sekarang</button>
+                </div>
             </div>
         </div>
 
@@ -182,7 +187,7 @@
                 </div>
 
                 <div class="variable slider p-4">
-                <!-- Card -->
+                    <!-- Card -->
                     <div class="mx-4">
                         <div class="card border-none">
 
@@ -460,7 +465,39 @@
                     HeyEvents! Sekarang</h1>
             </div>
             <!-- card -->
-            <div class="flex flex-rows">
+            <div class="flex md:flex-row flex-col justify-center">
+                <div>
+                    <div class="mx-4 mt-16">
+                        <div class="card">
+
+                            <div class="mb-5">
+                                <!-- <img src="./img/smkn1-head.png" class="w-full"> -->
+                                <img src="./img/rate.svg" alt="">
+                            </div>
+                            <div class="mb-5 w-full">
+                                <!-- <h4 class="text-prime font-bold text-xl w-full mb-2">SMK Coding Surabaya 2022</h4> -->
+                                <p class="text-grey text-base md:w-full w-72">Webnya keren bangett. Belum ada konsep
+                                    aplikasi
+                                    seperti ini di Indonesia, platform untuk cari info info event yang ada. Sangat
+                                    membantu buat orang kayak aku yang sukaa banget nge-event 😆</p>
+                            </div>
+                            <div class="flex">
+                                <div>
+                                    <div class="flex">
+                                        <img src="./img/smkn1.png" width="53" height="53">
+                                        <div class="ml-5">
+                                            <div class="flex">
+                                                <p class="text-prime font-bold">SMKN 1 Surabaya</p>
+                                                <img src="img/ceklist.png" class="w-1/4 h-1/4">
+                                            </div>
+                                            <p class="text-grey">Sekolah</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div>
                     <div class="mx-4 mt-16">
                         <div class="card">
@@ -491,37 +528,8 @@
                             </div>
                         </div>
                     </div>
-                </div>  <div>
-                    <div class="mx-4 mt-16">
-                        <div class="card">
-
-                            <div class="mb-5">
-                                <!-- <img src="./img/smkn1-head.png" class="w-full"> -->
-                                <img src="./img/rate.svg" alt="">
-                            </div>
-                            <div class="mb-5 w-full">
-                                <!-- <h4 class="text-prime font-bold text-xl w-full mb-2">SMK Coding Surabaya 2022</h4> -->
-                                <p class="text-grey text-base w-full">Webnya keren bangett. Belum ada konsep aplikasi
-                                    seperti ini di Indonesia, platform untuk cari info info event yang ada. Sangat
-                                    membantu buat orang kayak aku yang sukaa banget nge-event 😆</p>
-                            </div>
-                            <div class="flex">
-                                <div>
-                                    <div class="flex items-center">
-                                        <img src="./img/smkn1.png" width="53" height="53">
-                                        <div class="ml-5">
-                                            <div class="flex">
-                                                <p class="text-prime font-bold">SMKN 1 Surabaya</p>
-                                                <img src="img/ceklist.png" class="w-1/4 h-1/4">
-                                            </div>
-                                            <p class="text-grey">Sekolah</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>  <div>
+                </div>
+                <div>
                     <div class="mx-4 mt-16">
                         <div class="card">
 
