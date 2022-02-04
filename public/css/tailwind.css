@@ -513,6 +513,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   left: 0px;
 }
 
+.left-5 {
+  left: 1.25rem;
+}
+
+.top-96 {
+  top: 24rem;
+}
+
 .-left-6 {
   left: -1.5rem;
 }
@@ -553,11 +561,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .my-10 {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
-}
-
-.mx-12 {
-  margin-left: 3rem;
-  margin-right: 3rem;
 }
 
 .my-7 {
@@ -667,12 +670,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 3rem;
 }
 
-.ml-0 {
-  margin-left: 0px;
+.ml-16 {
+  margin-left: 4rem;
 }
 
-.ml-7 {
-  margin-left: 1.75rem;
+.ml-20 {
+  margin-left: 5rem;
 }
 
 .mt-14 {
@@ -689,6 +692,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mb-10 {
   margin-bottom: 2.5rem;
+}
+
+.ml-0 {
+  margin-left: 0px;
 }
 
 .ml-4 {
@@ -881,6 +888,22 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 1.25rem;
 }
 
+.w-2\.5 {
+  width: 0.625rem;
+}
+
+.w-2 {
+  width: 0.5rem;
+}
+
+.w-9\/12 {
+  width: 75%;
+}
+
+.w-8\/12 {
+  width: 66.666667%;
+}
+
 .max-w-screen-xl {
   max-width: 1280px;
 }
@@ -1030,18 +1053,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
-.space-x-4 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(1rem * var(--tw-space-x-reverse));
-  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
-}
-
-.space-x-0 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(0px * var(--tw-space-x-reverse));
-  margin-left: calc(0px * calc(1 - var(--tw-space-x-reverse)));
-}
-
 .justify-self-start {
   justify-self: start;
 }
@@ -1159,12 +1170,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding: 1.75rem;
 }
 
-.p-1\.5 {
-  padding: 0.375rem;
-}
-
 .p-1 {
   padding: 0.25rem;
+}
+
+.p-1\.5 {
+  padding: 0.375rem;
 }
 
 .py-5 {
@@ -1714,6 +1725,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 768px) {
+  .md\:left-32 {
+    left: 8rem;
+  }
+
+  .md\:top-72 {
+    top: 18rem;
+  }
+
   .md\:order-1 {
     order: 1;
   }
@@ -1869,10 +1888,6 @@ Ensure the default browser behavior of the `hidden` attribute.
     flex-direction: row;
   }
 
-  .md\:flex-col {
-    flex-direction: column;
-  }
-
   .md\:items-center {
     align-items: center;
   }
@@ -1896,6 +1911,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   .md\:gap-x-3 {
     -moz-column-gap: 0.75rem;
          column-gap: 0.75rem;
+  }
+
+  .md\:p-3 {
+    padding: 0.75rem;
   }
 
   .md\:px-6 {
